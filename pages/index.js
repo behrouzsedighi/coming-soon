@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import CountDown from '@/components/Countdown/Timer'
+import { Typography } from '@mui/material'
 
 export default function Home() {
   return (
@@ -14,110 +11,46 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
+      <div className="App">
+        <div className="container">
+        <svg width="200" height="190" viewBox="0 0 5964 4430" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_868_6671)">
+          <path d="M1363.91 756.369C1135.57 745.499 919.475 791.637 729.328 881.083V96.0312C729.328 70.5382 718.814 46.0893 700.1 28.063C681.385 10.0367 656.003 -0.0903778 629.537 -0.0903778H99.6278C73.2063 -0.0857442 47.8685 10.0262 29.1857 28.022C10.5029 46.0178 0.00481046 70.4241 0 95.874V1969.67C0.00953092 1973.17 0.233741 1976.68 0.671368 1980.15C0.48993 1988.56 0 1996.88 0 2005.3C0 2695.91 581.219 3255.74 1298.17 3255.74C2034.99 3255.74 2628.42 2664.47 2595 1947.65C2565.17 1308.04 2027.74 787.984 1363.91 756.369ZM1857.42 2040.12C1835.97 2302.11 1615.64 2514.36 1343.64 2535.02C997.893 2561.24 711.528 2285.45 738.781 1952.42C760.299 1690.43 980.656 1478.17 1252.63 1457.52C1598.38 1431.27 1884.76 1707.1 1857.49 2040.12H1857.42Z" fill="url(#paint0_linear_868_6671)"/>
+          <path d="M3130.68 2534.97C2856.91 2521.62 2634.47 2307.78 2620.59 2044.4C2618.37 2002.3 2617.25 1921.51 2616.71 1834.94V1487.98H3268.7C3282 1487.99 3295.17 1485.47 3307.46 1480.57C3319.75 1475.67 3330.92 1468.49 3340.33 1459.43C3349.74 1450.38 3357.2 1439.62 3362.3 1427.79C3367.39 1415.96 3370.01 1403.27 3370.02 1390.46V858.367C3370.02 832.924 3359.53 808.524 3340.85 790.534C3322.17 772.544 3296.84 762.437 3270.43 762.437H2617.59C2617.36 762.437 2617.13 762.347 2616.97 762.186C2616.8 762.026 2616.71 761.808 2616.71 761.581V97.1009C2616.71 71.3483 2606.08 46.6505 2587.18 28.4406C2568.27 10.2308 2542.63 0.000656128 2515.9 0.000656128H1960.5C1947.34 0.000656128 1934.32 2.49594 1922.17 7.34407C1910.02 12.1922 1898.98 19.2982 1889.68 28.2563C1880.38 37.2145 1873 47.8495 1867.97 59.5539C1862.93 71.2583 1860.34 83.8029 1860.34 96.4717V1996.18C1860.44 2003.27 1861.48 2010.32 1863.43 2017.16V2017.37C1863.43 2713.53 2434.85 3315.34 3158.72 3315.34C3179.18 3315.34 3375.59 3317.49 3389.85 3317.65C3390.34 3317.65 3390.67 3259.64 3390.67 3259.17V2534.2C3390.67 2534.09 3390.66 2533.99 3390.62 2533.88C3390.58 2533.78 3390.52 2533.69 3390.45 2533.61C3390.37 2533.53 3390.28 2533.46 3390.18 2533.42C3390.07 2533.37 3389.96 2533.35 3389.85 2533.35C3374.86 2533.56 3161.93 2536.58 3130.68 2534.97Z" fill="url(#paint1_linear_868_6671)"/>
+          <path d="M5962.03 1967.41C5931.19 1329.25 5395.25 810.609 4732.88 778.259C3993.15 742.153 3380.69 1302.84 3367.72 2004.46H3367.13V4332.98C3367.13 4358.71 3377.75 4383.38 3396.63 4401.58C3415.52 4419.78 3441.14 4430 3467.85 4430.01H4001.84C4028.52 4430.01 4054.11 4419.83 4073.03 4401.71C4091.94 4383.59 4102.64 4358.99 4102.78 4333.29L4108.62 3277.32C4288.12 3277.32 4463.55 3277.49 4665.31 3277.49C5402.8 3277.58 5996.65 2685.12 5962.03 1967.41ZM5225.52 1999.77C5225.52 2295.62 4974.23 2537.69 4667.07 2537.69H4108.62V1999.77C4108.62 1703.91 4359.93 1461.86 4667.07 1461.86C4974.21 1461.86 5225.52 1703.91 5225.52 1999.77Z" fill="url(#paint2_linear_868_6671)"/>
+          </g>
+          <defs>
+          <linearGradient id="paint0_linear_868_6671" x1="1298.17" y1="-0.0903778" x2="1298.17" y2="3255.74" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#EBCD84"/>
+          <stop offset="1" stop-color="#C4A263"/>
+          </linearGradient>
+          <linearGradient id="paint1_linear_868_6671" x1="2625.51" y1="0.000656128" x2="2625.51" y2="3317.65" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#EBCD84"/>
+          <stop offset="1" stop-color="#C4A263"/>
+          </linearGradient>
+          <linearGradient id="paint2_linear_868_6671" x1="4665.3" y1="776.608" x2="4665.3" y2="4430.01" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#EBCD84"/>
+          <stop offset="1" stop-color="#C4A263"/>
+          </linearGradient>
+          <clipPath id="clip0_868_6671">
+          <rect width="5963.46" height="4430" fill="white"/>
+          </clipPath>
+          </defs>
+          </svg>
+
+          <Typography variant="h1" component="h2" sx={{fontFamily:"Kalameh",fontSize:{xs:"30px",md:"70px"}}}>
+            بارمان تجارت پایدار
+          </Typography>
+          <Typography variant="h1" component="h2" sx={{fontFamily:"Kalameh",fontSize:{xs:"25px",md:"50px"},mt:"30px",mb:"60px"}}>
+            به زودی...
+          </Typography>
+            
+           <CountDown />
+           <Typography variant="h1" component="h2" sx={{fontFamily:"Kalameh",fontSize:"15px",mt:"30px",mb:"60px"}}>
+            طراحی و توسعه توسط شرکت داده نگار فن آوران پارس
+          </Typography>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </div>
     </>
   )
 }
